@@ -650,17 +650,20 @@ function Slide09Traction({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 8 }}>Traction</div>
-        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
-          Early signals are strong
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 8 }}>Launch Targets</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 6 }}>
+          What we're building towards
+        </div>
+        <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 14, fontStyle: "italic" }}>
+          Pre-launch — these are our 90-day post-launch goals
         </div>
 
         <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 12 }}>
           {[
-            { value: "2,400+", label: "Waitlist signups (organic)", color: "#1A9E5A" },
-            { value: "340", label: "Beta testers across UK + UAE", color: "#4CD98B" },
-            { value: "4.7★", label: "Beta satisfaction score", color: "#F5A623" },
-          ].map(({ value, label, color }) => (
+            { value: "2,000", label: "Signups target (90 days)", color: "#1A9E5A", prefix: "🎯" },
+            { value: "5+", label: "Channels integrated at launch", color: "#4CD98B", prefix: "🔗" },
+            { value: "3", label: "Diaspora corridors on day one", color: "#F5A623", prefix: "🌍" },
+          ].map(({ value, label, color, prefix }) => (
             <div key={label} style={{
               background: "rgba(255,255,255,0.04)",
               border: `1px solid ${color}33`,
@@ -668,6 +671,7 @@ function Slide09Traction({ active }: SlideProps) {
               padding: "16px 16px",
               textAlign: "center",
             }}>
+              <div style={{ fontSize: 18, marginBottom: 6 }}>{prefix}</div>
               <div style={{ fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 900, color, fontFamily: "'DM Mono', monospace", lineHeight: 1 }}>{value}</div>
               <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 8, lineHeight: 1.4 }}>{label}</div>
             </div>
@@ -676,18 +680,13 @@ function Slide09Traction({ active }: SlideProps) {
 
         <div className="anim-4" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {[
-            { label: "WhatsApp communities reached", value: 18, total: 20, suffix: " groups" },
-            { label: "Channel partnerships in negotiation", value: 3, total: 5, suffix: " channels" },
-            { label: "Beta users sending $500+/month", value: 78, total: 100, suffix: "%" },
-          ].map(({ label, value, total, suffix }) => (
-            <div key={label} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "12px 16px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontWeight: 500 }}>{label}</div>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 13, fontWeight: 700, color: "#1A9E5A" }}>{value}{suffix}</div>
-              </div>
-              <div style={{ height: 5, background: "rgba(255,255,255,0.08)", borderRadius: 999, overflow: "hidden" }}>
-                <div style={{ height: "100%", width: `${(value / total) * 100}%`, background: "linear-gradient(90deg, #1A9E5A, #4CD98B)", borderRadius: 999 }} />
-              </div>
+            { label: "Reach Pakistani WhatsApp diaspora communities", target: "UK, UAE, Saudi Arabia" },
+            { label: "Partner with hawala networks for live rate data", target: "5+ at launch" },
+            { label: "App Store & Play Store launch", target: "Q3 2025" },
+          ].map(({ label, target }) => (
+            <div key={label} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontWeight: 500 }}>{label}</div>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, fontWeight: 700, color: "#4CD98B", flexShrink: 0, marginLeft: 16 }}>{target}</div>
             </div>
           ))}
         </div>
@@ -779,36 +778,45 @@ function Slide11Team({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 8 }}>Team & Ask</div>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 8 }}>Founding Team & Ask</div>
         <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
-          Lived experience + fintech depth
+          Built by someone who lived this problem
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 12 }}>
-          {[
-            { name: "Ahmad Raza", role: "CEO & Product", bg: "#1A9E5A", initials: "AR", detail: "7 yrs remittance ops at Moneygram. Sent money home every month for 12 years" },
-            { name: "Sana Mirza", role: "CTO", bg: "#C0392B", initials: "SM", detail: "Ex-Wise engineer. Built rate aggregation at scale for APAC corridors" },
-            { name: "Bilal Qureshi", role: "GTM & Community", bg: "#F5A623", initials: "BQ", detail: "Built 40K+ member Pakistani diaspora WhatsApp network in UK" },
-          ].map(({ name, role, bg, initials, detail }) => (
-            <div key={name} style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: 16,
-              padding: "16px 14px",
-              textAlign: "center",
-            }}>
-              <div style={{
-                width: 44, height: 44, borderRadius: 14, background: bg,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 17, fontWeight: 900, color: "#fff",
-                margin: "0 auto 10px",
-                boxShadow: `0 6px 18px ${bg}44`,
-              }}>{initials}</div>
-              <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", marginBottom: 3 }}>{name}</div>
-              <div style={{ fontSize: 11, color: bg, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>{role}</div>
-              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>{detail}</div>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 12 }}>
+          {/* Founder card */}
+          <div style={{
+            background: "rgba(245,166,35,0.07)",
+            border: "1px solid rgba(245,166,35,0.25)",
+            borderRadius: 16,
+            padding: "20px 18px",
+          }}>
+            <div style={{ fontSize: 12, color: "#F5A623", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>Founder</div>
+            <div style={{ fontSize: 15, fontWeight: 800, color: "#fff", marginBottom: 6 }}>Saadia Asghar</div>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>
+              Pakistani diaspora member with first-hand experience of the remittance pain. Building HawalaTrack to solve the problem she faced every month — one app to compare, track, and save.
             </div>
-          ))}
+          </div>
+
+          {/* Roles we're hiring */}
+          <div style={{
+            background: "rgba(255,255,255,0.04)",
+            border: "1px solid rgba(255,255,255,0.1)",
+            borderRadius: 16,
+            padding: "20px 18px",
+          }}>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>Team We're Building</div>
+            {[
+              { role: "CTO / Lead Engineer", skills: "React Native · Node.js · Fintech APIs" },
+              { role: "Community Lead", skills: "Pakistani diaspora networks · GTM" },
+              { role: "Advisors", skills: "Remittance industry · Compliance" },
+            ].map(({ role, skills }) => (
+              <div key={role} style={{ marginBottom: 10 }}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{role}</div>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>{skills}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="anim-4" style={{
