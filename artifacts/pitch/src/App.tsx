@@ -682,7 +682,7 @@ function Slide09Traction({ active }: SlideProps) {
           {[
             { label: "Reach Pakistani WhatsApp diaspora communities", target: "UK, UAE, Saudi Arabia" },
             { label: "Partner with hawala networks for live rate data", target: "5+ at launch" },
-            { label: "App Store & Play Store launch", target: "Q3 2025" },
+            { label: "App Store & Play Store launch", target: "6 months post-funding" },
           ].map(({ label, target }) => (
             <div key={label} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontWeight: 500 }}>{label}</div>
