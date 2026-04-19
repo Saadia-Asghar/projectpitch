@@ -423,39 +423,69 @@ function Slide06Demo({ active }: SlideProps) {
             </div>
           </div>
           {/* Stats 2x2 */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 5, padding: "8px 12px 4px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 5, padding: "8px 12px 6px" }}>
             {[
               { label: "Total Sent", val: "$2,300", color: "#fff" },
               { label: "Saved vs WU", val: "$108.73", color: "#1A9E5A" },
               { label: "In Transit", val: "2", color: "#fff" },
               { label: "Delivered", val: "4", color: "#fff" },
             ].map((s) => (
-              <div key={s.label} style={{ background: "rgba(255,255,255,0.05)", borderRadius: 8, padding: "6px 8px" }}>
+              <div key={s.label} style={{ background: "rgba(255,255,255,0.05)", borderRadius: 8, padding: "5px 8px" }}>
                 <div style={{ fontSize: 7, color: "rgba(255,255,255,0.35)", textTransform: "uppercase" }}>{s.label}</div>
-                <div style={{ fontSize: 12, fontWeight: 900, color: s.color, fontFamily: "'DM Mono', monospace" }}>{s.val}</div>
+                <div style={{ fontSize: 11, fontWeight: 900, color: s.color, fontFamily: "'DM Mono', monospace" }}>{s.val}</div>
               </div>
             ))}
           </div>
-          {/* Bottom nav */}
+          {/* Quick actions */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 5, padding: "4px 12px 6px" }}>
+            {[
+              { label: "Compare", bg: "#0D2045" },
+              { label: "Transfer", bg: "#C0392B" },
+              { label: "Savings", bg: "#0E6B3A" },
+            ].map((a) => (
+              <div key={a.label} style={{ background: a.bg, borderRadius: 8, padding: "6px 4px", textAlign: "center" }}>
+                <div style={{ fontSize: 8, fontWeight: 700, color: "#fff" }}>{a.label}</div>
+              </div>
+            ))}
+          </div>
+          {/* Top channels */}
+          <div style={{ padding: "4px 12px 6px" }}>
+            <div style={{ fontSize: 8, fontWeight: 700, color: "rgba(255,255,255,0.4)", textTransform: "uppercase", marginBottom: 4, letterSpacing: "0.08em" }}>Top Channels</div>
+            {[
+              { name: "JazzCash", fee: "0.7%", color: "#CC0000", init: "J", best: true },
+              { name: "Wise", fee: "0.8%", color: "#163300", init: "W", best: false },
+              { name: "Easypaisa", fee: "1.3%", color: "#0E7C3A", init: "E", best: false },
+            ].map((ch) => (
+              <div key={ch.name} style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                <div style={{ width: 16, height: 16, borderRadius: "50%", background: ch.color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 7, fontWeight: 700, color: "#fff", flexShrink: 0 }}>{ch.init}</div>
+                <div style={{ flex: 1, fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.75)" }}>{ch.name}</div>
+                <div style={{ fontSize: 9, fontWeight: 700, color: "#1A9E5A", fontFamily: "'DM Mono', monospace" }}>{ch.fee}</div>
+                {ch.best && <div style={{ fontSize: 7, background: "rgba(26,158,90,0.2)", color: "#4CD98B", borderRadius: 3, padding: "1px 4px", fontWeight: 700 }}>BEST</div>}
+              </div>
+            ))}
+          </div>
+          {/* Bottom nav — using SVG icons */}
           <div style={{
             position: "absolute", bottom: 0, left: 0, right: 0,
-            background: "rgba(10,22,40,0.97)",
+            background: "rgba(8,18,36,0.98)",
             borderTop: "1px solid rgba(255,255,255,0.08)",
-            height: 48,
+            height: 46,
             display: "flex",
             alignItems: "center",
             justifyContent: "space-around",
-            padding: "0 4px",
+            padding: "0 6px",
           }}>
             {[
-              { icon: "⊞", label: "Home", active: true },
-              { icon: "⇄", label: "Compare", active: false },
-              { icon: "🐷", label: "Savings", active: false },
-              { icon: "🕐", label: "History", active: false },
-              { icon: "📖", label: "Guide", active: false },
-            ].map(({ icon, label, active }) => (
+              { label: "Home", active: true, path: "M3 9.5L8 5l5 4.5V15H10v-3H6v3H3V9.5z" },
+              { label: "Compare", active: false, path: "M3 6h10M3 10h10M5 6l-2 4M11 6l2 4" },
+              { label: "Savings", active: false, path: "M8 3a5 5 0 1 0 0 10A5 5 0 0 0 8 3zm1 7H7V8H5.5l2.5-3 2.5 3H9v2z" },
+              { label: "History", active: false, path: "M8 4v4l2.5 2.5M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2z" },
+              { label: "Guide", active: false, path: "M3 4h10v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4zm4 0v8M3 7h4" },
+            ].map(({ label, active, path }) => (
               <div key={label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2, opacity: active ? 1 : 0.35 }}>
-                <div style={{ fontSize: 13 }}>{icon}</div>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke={active ? "#fff" : "rgba(255,255,255,0.7)"} strokeWidth={active ? 2 : 1.5} strokeLinecap="round" strokeLinejoin="round">
+                  <path d={path} />
+                </svg>
                 <div style={{ fontSize: 7, color: active ? "#fff" : "rgba(255,255,255,0.5)", fontWeight: active ? 700 : 400 }}>{label}</div>
               </div>
             ))}
