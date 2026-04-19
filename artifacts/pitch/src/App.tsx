@@ -30,31 +30,31 @@ function Slide01Cover({ active }: SlideProps) {
 
       <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 860 }}>
         {/* Logo */}
-        <div className="anim-1" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginBottom: 32 }}>
+        <div className="anim-1" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 16 }}>
           <div style={{
-            width: 64, height: 64, borderRadius: 20,
+            width: 48, height: 48, borderRadius: 16,
             background: "linear-gradient(135deg, #C0392B, #E8401C)",
             display: "flex", alignItems: "center", justifyContent: "center",
             boxShadow: "0 8px 32px rgba(192,57,43,0.4)",
           }}>
-            <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <svg width="26" height="26" viewBox="0 0 34 34" fill="none">
               <path d="M17 4L28 10V22L17 28L6 22V10L17 4Z" stroke="white" strokeWidth="2.5" fill="none"/>
               <path d="M17 9L23 13V19L17 23L11 19V13L17 9Z" fill="white" fillOpacity="0.9"/>
             </svg>
           </div>
           <div style={{ textAlign: "left" }}>
-            <div style={{ fontSize: 38, fontWeight: 900, color: "#fff", lineHeight: 1, letterSpacing: "-1px" }}>HawalaTrack</div>
-            <div style={{ fontSize: 14, color: "rgba(255,255,255,0.5)", fontFamily: "'DM Mono', monospace", marginTop: 2 }}>v1.0  ·  Seed Round</div>
+            <div style={{ fontSize: 28, fontWeight: 900, color: "#fff", lineHeight: 1, letterSpacing: "-1px" }}>HawalaTrack</div>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", fontFamily: "'DM Mono', monospace", marginTop: 2 }}>v1.0  ·  Seed Round</div>
           </div>
         </div>
 
         <div className="anim-2" style={{
-          fontSize: "clamp(36px, 5vw, 64px)",
+          fontSize: "clamp(26px, 4vw, 48px)",
           fontWeight: 900,
           color: "#fff",
           lineHeight: 1.1,
-          letterSpacing: "-2px",
-          marginBottom: 24,
+          letterSpacing: "-1.5px",
+          marginBottom: 14,
         }}>
           The Missing App for<br />
           <span style={{ background: "linear-gradient(135deg, #1A9E5A, #4CD98B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
@@ -63,16 +63,16 @@ function Slide01Cover({ active }: SlideProps) {
         </div>
 
         <div className="anim-3" style={{
-          fontSize: 20,
+          fontSize: 15,
           color: "rgba(255,255,255,0.6)",
-          maxWidth: 560,
-          margin: "0 auto 40px",
-          lineHeight: 1.6,
+          maxWidth: 520,
+          margin: "0 auto 20px",
+          lineHeight: 1.5,
         }}>
           Compare rates, track transfers, and save money — built for the 9 million Pakistanis working abroad
         </div>
 
-        <div className="anim-4" style={{ display: "flex", gap: 32, justifyContent: "center" }}>
+        <div className="anim-4" style={{ display: "flex", gap: 16, justifyContent: "center" }}>
           {[
             { label: "Market Size", value: "$27B" },
             { label: "Overseas Pakistanis", value: "9M+" },
@@ -81,12 +81,12 @@ function Slide01Cover({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(255,255,255,0.06)",
               border: "1px solid rgba(255,255,255,0.12)",
-              borderRadius: 16,
-              padding: "16px 28px",
+              borderRadius: 14,
+              padding: "12px 22px",
               backdropFilter: "blur(8px)",
             }}>
-              <div style={{ fontSize: 28, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace" }}>{value}</div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", marginTop: 4, textTransform: "uppercase", letterSpacing: "0.08em" }}>{label}</div>
+              <div style={{ fontSize: 22, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace" }}>{value}</div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 3, textTransform: "uppercase", letterSpacing: "0.08em" }}>{label}</div>
             </div>
           ))}
         </div>
@@ -102,13 +102,13 @@ function Slide02Problem({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#C0392B", textTransform: "uppercase", marginBottom: 16 }}>The Problem</div>
-        <div className="anim-2" style={{ fontSize: "clamp(32px, 4.5vw, 58px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 40 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#C0392B", textTransform: "uppercase", marginBottom: 8 }}>The Problem</div>
+        <div className="anim-2" style={{ fontSize: "clamp(24px, 3.5vw, 42px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           Sending money home is<br />
           <span style={{ background: "linear-gradient(135deg, #C0392B, #E8401C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>broken — and costly</span>
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14 }}>
           {[
             { icon: "💸", stat: "7–12%", label: "Hidden fees", sub: "Western Union, banks charge up to 12% in fees + spread" },
             { icon: "🔍", stat: "8+", label: "Channels to check", sub: "Hawala, WU, Remitly, bank wire — no single comparison tool" },
@@ -117,29 +117,29 @@ function Slide02Problem({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(255,255,255,0.04)",
               border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: 20,
-              padding: "28px 24px",
+              borderRadius: 16,
+              padding: "16px 16px",
             }}>
-              <div style={{ fontSize: 36, marginBottom: 16 }}>{icon}</div>
-              <div style={{ fontSize: 42, fontWeight: 900, color: "#C0392B", fontFamily: "'DM Mono', monospace", lineHeight: 1 }}>{stat}</div>
-              <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", margin: "8px 0 8px" }}>{label}</div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.45)", lineHeight: 1.5 }}>{sub}</div>
+              <div style={{ fontSize: 24, marginBottom: 8 }}>{icon}</div>
+              <div style={{ fontSize: 30, fontWeight: 900, color: "#C0392B", fontFamily: "'DM Mono', monospace", lineHeight: 1 }}>{stat}</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#fff", margin: "6px 0 6px" }}>{label}</div>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", lineHeight: 1.4 }}>{sub}</div>
             </div>
           ))}
         </div>
 
         <div className="anim-4" style={{
-          marginTop: 28,
+          marginTop: 12,
           background: "rgba(192,57,43,0.12)",
           border: "1px solid rgba(192,57,43,0.3)",
-          borderRadius: 16,
-          padding: "20px 28px",
+          borderRadius: 14,
+          padding: "12px 20px",
           display: "flex",
           alignItems: "center",
-          gap: 20,
+          gap: 14,
         }}>
-          <div style={{ fontSize: 32 }}>📉</div>
-          <div style={{ fontSize: 16, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+          <div style={{ fontSize: 22 }}>📉</div>
+          <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
             A Pakistani worker sending <strong style={{ color: "#fff" }}>$1,000/month</strong> loses up to <strong style={{ color: "#C0392B" }}>$1,440 per year</strong> in unnecessary fees — enough to pay a child's annual school fees.
           </div>
         </div>
@@ -155,13 +155,13 @@ function Slide03Market({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#1A9E5A", textTransform: "uppercase", marginBottom: 16 }}>Market Size</div>
-        <div className="anim-2" style={{ fontSize: "clamp(32px, 4.5vw, 54px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 40 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#1A9E5A", textTransform: "uppercase", marginBottom: 8 }}>Market Size</div>
+        <div className="anim-2" style={{ fontSize: "clamp(24px, 3.5vw, 42px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           Massive, underserved,<br />
           <span style={{ background: "linear-gradient(135deg, #1A9E5A, #4CD98B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>and growing fast</span>
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 14 }}>
           {[
             { value: "$27B", label: "Pakistan remittances 2024", color: "#1A9E5A" },
             { value: "9M+", label: "Overseas Pakistani diaspora", color: "#F5A623" },
@@ -170,17 +170,17 @@ function Slide03Market({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(255,255,255,0.04)",
               border: `1px solid ${color}33`,
-              borderRadius: 20,
-              padding: "28px 24px",
+              borderRadius: 16,
+              padding: "16px 16px",
               textAlign: "center",
             }}>
-              <div style={{ fontSize: "clamp(40px, 5vw, 64px)", fontWeight: 900, color, fontFamily: "'DM Mono', monospace", lineHeight: 1 }}>{value}</div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 12, lineHeight: 1.4 }}>{label}</div>
+              <div style={{ fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 900, color, fontFamily: "'DM Mono', monospace", lineHeight: 1 }}>{value}</div>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 8, lineHeight: 1.4 }}>{label}</div>
             </div>
           ))}
         </div>
 
-        <div className="anim-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+        <div className="anim-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
           {[
             { label: "SAM — Digital-first senders", value: "$8.2B", sub: "30% already use apps like Remitly, Wise" },
             { label: "SOM — Year 1 target (UK + UAE)", value: "$820M", sub: "Largest Pakistani diaspora corridors" },
@@ -188,12 +188,12 @@ function Slide03Market({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(26,158,90,0.08)",
               border: "1px solid rgba(26,158,90,0.2)",
-              borderRadius: 16,
-              padding: "20px 24px",
+              borderRadius: 14,
+              padding: "14px 18px",
             }}>
-              <div style={{ fontSize: 12, color: "#1A9E5A", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>{label}</div>
-              <div style={{ fontSize: 36, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace" }}>{value}</div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.45)", marginTop: 8 }}>{sub}</div>
+              <div style={{ fontSize: 11, color: "#1A9E5A", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>{label}</div>
+              <div style={{ fontSize: 26, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace" }}>{value}</div>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", marginTop: 6 }}>{sub}</div>
             </div>
           ))}
         </div>
@@ -209,12 +209,12 @@ function Slide04PainPoints({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 16 }}>User Research</div>
-        <div className="anim-2" style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 36 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 8 }}>User Research</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           What senders actually say
         </div>
 
-        <div className="anim-3" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        <div className="anim-3" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {[
             {
               quote: "I checked WhatsApp groups, called 3 banks, and still wasn't sure I got the best rate.",
@@ -238,17 +238,17 @@ function Slide04PainPoints({ active }: SlideProps) {
             <div key={name} style={{
               background: "rgba(255,255,255,0.04)",
               border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: 16,
-              padding: "20px 24px",
+              borderRadius: 14,
+              padding: "14px 18px",
               display: "flex",
-              gap: 20,
+              gap: 14,
               alignItems: "flex-start",
             }}>
-              <div style={{ fontSize: 32, flexShrink: 0 }}>{emoji}</div>
+              <div style={{ fontSize: 24, flexShrink: 0 }}>{emoji}</div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: 16, color: "rgba(255,255,255,0.8)", lineHeight: 1.5, marginBottom: 10, fontStyle: "italic" }}>"{quote}"</div>
-                <div style={{ fontSize: 13, color: "#F5A623", fontWeight: 700 }}>{name}</div>
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>{role}</div>
+                <div style={{ fontSize: 14, color: "rgba(255,255,255,0.8)", lineHeight: 1.4, marginBottom: 8, fontStyle: "italic" }}>"{quote}"</div>
+                <div style={{ fontSize: 12, color: "#F5A623", fontWeight: 700 }}>{name}</div>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>{role}</div>
               </div>
             </div>
           ))}
@@ -265,13 +265,13 @@ function Slide05Solution({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 16 }}>The Solution</div>
-        <div className="anim-2" style={{ fontSize: "clamp(28px, 4.5vw, 54px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 40 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 8 }}>The Solution</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           One app that does it all<br />
           <span style={{ background: "linear-gradient(135deg, #1A9E5A, #4CD98B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>so you never leave money on the table</span>
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           {[
             { icon: "📊", title: "Rate Comparator", desc: "Live rates across 8+ channels — bank, hawala, mobile wallet, and digital — ranked by PKR delivered" },
             { icon: "🔔", title: "Rate Alerts", desc: "WhatsApp & SMS notify when a specific channel hits your target rate" },
@@ -281,33 +281,33 @@ function Slide05Solution({ active }: SlideProps) {
             <div key={title} style={{
               background: "rgba(26,158,90,0.08)",
               border: "1px solid rgba(26,158,90,0.2)",
-              borderRadius: 20,
-              padding: "24px",
+              borderRadius: 16,
+              padding: "14px 16px",
               display: "flex",
-              gap: 16,
+              gap: 12,
               alignItems: "flex-start",
             }}>
-              <div style={{ fontSize: 32, flexShrink: 0 }}>{icon}</div>
+              <div style={{ fontSize: 24, flexShrink: 0 }}>{icon}</div>
               <div>
-                <div style={{ fontSize: 17, fontWeight: 800, color: "#fff", marginBottom: 8 }}>{title}</div>
-                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>{desc}</div>
+                <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", marginBottom: 6 }}>{title}</div>
+                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>{desc}</div>
               </div>
             </div>
           ))}
         </div>
 
         <div className="anim-4" style={{
-          marginTop: 24,
+          marginTop: 12,
           background: "rgba(26,158,90,0.12)",
           border: "1px solid rgba(26,158,90,0.3)",
-          borderRadius: 16,
-          padding: "16px 24px",
+          borderRadius: 14,
+          padding: "12px 18px",
           display: "flex",
           alignItems: "center",
-          gap: 16,
+          gap: 12,
         }}>
-          <span style={{ fontSize: 24 }}>🎯</span>
-          <div style={{ fontSize: 15, color: "rgba(255,255,255,0.75)" }}>
+          <span style={{ fontSize: 20 }}>🎯</span>
+          <div style={{ fontSize: 13, color: "rgba(255,255,255,0.75)" }}>
             Works for <strong style={{ color: "#4CD98B" }}>all channels</strong> including informal hawala networks, not just regulated remittance apps
           </div>
         </div>
@@ -322,13 +322,13 @@ function Slide06Demo({ active }: SlideProps) {
       background: "#050e1f",
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
       flexDirection: "row",
-      gap: 60,
+      gap: 40,
       alignItems: "center",
-      padding: "40px 80px",
+      padding: "clamp(10px,2.5vh,32px) clamp(20px,5vw,72px)",
     }}>
       <div style={{ flex: 1 }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 16 }}>Live App · v1.0</div>
-        <div className="anim-2" style={{ fontSize: "clamp(26px, 3.5vw, 46px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 24 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 8 }}>Live App · v1.0</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3vw, 38px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           Simple.<br />Powerful.<br />
           <span style={{ background: "linear-gradient(135deg, #1A9E5A, #4CD98B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Built for trust.</span>
         </div>
@@ -371,10 +371,10 @@ function Slide06Demo({ active }: SlideProps) {
       {/* Phone mockup — showing Home Dashboard */}
       <div className="anim-4 float" style={{ flexShrink: 0 }}>
         <div style={{
-          width: 240,
-          height: 500,
+          width: 220,
+          height: "min(430px, 72vh)",
           background: "#0A1628",
-          borderRadius: 40,
+          borderRadius: 36,
           border: "2px solid rgba(255,255,255,0.12)",
           boxShadow: "0 40px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05) inset, 0 0 60px rgba(26,158,90,0.12)",
           overflow: "hidden",
@@ -503,12 +503,12 @@ function Slide07HowItWorks({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 16 }}>How It Works</div>
-        <div className="anim-2" style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 40 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 8 }}>How It Works</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           Under the hood
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14 }}>
           {[
             {
               icon: "🔄",
@@ -529,16 +529,16 @@ function Slide07HowItWorks({ active }: SlideProps) {
             <div key={title} style={{
               background: "rgba(255,255,255,0.04)",
               border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: 20,
-              padding: "28px 24px",
+              borderRadius: 16,
+              padding: "16px 16px",
             }}>
-              <div style={{ fontSize: 36, marginBottom: 16 }}>{icon}</div>
-              <div style={{ fontSize: 17, fontWeight: 800, color: "#fff", marginBottom: 16 }}>{title}</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ fontSize: 26, marginBottom: 10 }}>{icon}</div>
+              <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", marginBottom: 10 }}>{title}</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
                 {items.map((item) => (
-                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#1A9E5A", flexShrink: 0 }} />
-                    <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>{item}</div>
+                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#1A9E5A", flexShrink: 0 }} />
+                    <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{item}</div>
                   </div>
                 ))}
               </div>
@@ -546,7 +546,7 @@ function Slide07HowItWorks({ active }: SlideProps) {
           ))}
         </div>
 
-        <div className="anim-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginTop: 20 }}>
+        <div className="anim-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginTop: 12 }}>
           {[
             { label: "Update Frequency", value: "15 min" },
             { label: "Channels Tracked", value: "8+" },
@@ -555,12 +555,12 @@ function Slide07HowItWorks({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(26,158,90,0.08)",
               border: "1px solid rgba(26,158,90,0.2)",
-              borderRadius: 14,
-              padding: "16px 20px",
+              borderRadius: 12,
+              padding: "12px 16px",
               textAlign: "center",
             }}>
-              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 28, fontWeight: 700, color: "#1A9E5A" }}>{value}</div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", marginTop: 4 }}>{label}</div>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 22, fontWeight: 700, color: "#1A9E5A" }}>{value}</div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>{label}</div>
             </div>
           ))}
         </div>
@@ -576,13 +576,13 @@ function Slide08BusinessModel({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 16 }}>Business Model</div>
-        <div className="anim-2" style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 40 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 8 }}>Business Model</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           Three revenue streams,<br />
           <span style={{ background: "linear-gradient(135deg, #F5A623, #FFD700)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>all asset-light</span>
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 12 }}>
           {[
             {
               label: "Freemium SaaS",
@@ -609,18 +609,18 @@ function Slide08BusinessModel({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(255,255,255,0.04)",
               border: `1px solid ${color}33`,
-              borderRadius: 20,
-              padding: "28px 24px",
+              borderRadius: 16,
+              padding: "16px 16px",
             }}>
-              <div style={{ fontSize: 32, marginBottom: 12 }}>{icon}</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>{label}</div>
-              <div style={{ fontSize: 32, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace", marginBottom: 12 }}>{arpu}</div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>{sub}</div>
+              <div style={{ fontSize: 24, marginBottom: 8 }}>{icon}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>{label}</div>
+              <div style={{ fontSize: 24, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace", marginBottom: 8 }}>{arpu}</div>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>{sub}</div>
             </div>
           ))}
         </div>
 
-        <div className="anim-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
+        <div className="anim-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14 }}>
           {[
             { label: "Year 1 ARR target", value: "$280K" },
             { label: "Break-even users", value: "5,800" },
@@ -629,12 +629,12 @@ function Slide08BusinessModel({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(245,166,35,0.08)",
               border: "1px solid rgba(245,166,35,0.2)",
-              borderRadius: 14,
-              padding: "16px 20px",
+              borderRadius: 12,
+              padding: "12px 16px",
               textAlign: "center",
             }}>
-              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 28, fontWeight: 700, color: "#F5A623" }}>{value}</div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", marginTop: 4 }}>{label}</div>
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 22, fontWeight: 700, color: "#F5A623" }}>{value}</div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>{label}</div>
             </div>
           ))}
         </div>
@@ -650,12 +650,12 @@ function Slide09Traction({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 16 }}>Traction</div>
-        <div className="anim-2" style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 36 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#4CD98B", textTransform: "uppercase", marginBottom: 8 }}>Traction</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           Early signals are strong
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 12 }}>
           {[
             { value: "2,400+", label: "Waitlist signups (organic)", color: "#1A9E5A" },
             { value: "340", label: "Beta testers across UK + UAE", color: "#4CD98B" },
@@ -664,28 +664,28 @@ function Slide09Traction({ active }: SlideProps) {
             <div key={label} style={{
               background: "rgba(255,255,255,0.04)",
               border: `1px solid ${color}33`,
-              borderRadius: 20,
-              padding: "28px 24px",
+              borderRadius: 16,
+              padding: "16px 16px",
               textAlign: "center",
             }}>
-              <div style={{ fontSize: "clamp(36px, 4vw, 52px)", fontWeight: 900, color, fontFamily: "'DM Mono', monospace", lineHeight: 1 }}>{value}</div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 12, lineHeight: 1.4 }}>{label}</div>
+              <div style={{ fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 900, color, fontFamily: "'DM Mono', monospace", lineHeight: 1 }}>{value}</div>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 8, lineHeight: 1.4 }}>{label}</div>
             </div>
           ))}
         </div>
 
-        <div className="anim-4" style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        <div className="anim-4" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {[
             { label: "WhatsApp communities reached", value: 18, total: 20, suffix: " groups" },
             { label: "Channel partnerships in negotiation", value: 3, total: 5, suffix: " channels" },
             { label: "Beta users sending $500+/month", value: 78, total: 100, suffix: "%" },
           ].map(({ label, value, total, suffix }) => (
-            <div key={label} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "16px 20px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
-                <div style={{ fontSize: 14, color: "rgba(255,255,255,0.7)", fontWeight: 500 }}>{label}</div>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 14, fontWeight: 700, color: "#1A9E5A" }}>{value}{suffix}</div>
+            <div key={label} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "12px 16px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontWeight: 500 }}>{label}</div>
+                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 13, fontWeight: 700, color: "#1A9E5A" }}>{value}{suffix}</div>
               </div>
-              <div style={{ height: 6, background: "rgba(255,255,255,0.08)", borderRadius: 999, overflow: "hidden" }}>
+              <div style={{ height: 5, background: "rgba(255,255,255,0.08)", borderRadius: 999, overflow: "hidden" }}>
                 <div style={{ height: "100%", width: `${(value / total) * 100}%`, background: "linear-gradient(90deg, #1A9E5A, #4CD98B)", borderRadius: 999 }} />
               </div>
             </div>
@@ -703,8 +703,8 @@ function Slide10Competition({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#C0392B", textTransform: "uppercase", marginBottom: 16 }}>Competitive Landscape</div>
-        <div className="anim-2" style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 36 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#C0392B", textTransform: "uppercase", marginBottom: 8 }}>Competitive Landscape</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           No one does all three
         </div>
 
@@ -779,12 +779,12 @@ function Slide11Team({ active }: SlideProps) {
       opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
     }}>
       <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 16 }}>Team & Ask</div>
-        <div className="anim-2" style={{ fontSize: "clamp(28px, 4vw, 50px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 36 }}>
+        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 8 }}>Team & Ask</div>
+        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
           Lived experience + fintech depth
         </div>
 
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
+        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 12 }}>
           {[
             { name: "Ahmad Raza", role: "CEO & Product", bg: "#1A9E5A", initials: "AR", detail: "7 yrs remittance ops at Moneygram. Sent money home every month for 12 years" },
             { name: "Sana Mirza", role: "CTO", bg: "#C0392B", initials: "SM", detail: "Ex-Wise engineer. Built rate aggregation at scale for APAC corridors" },
@@ -793,20 +793,20 @@ function Slide11Team({ active }: SlideProps) {
             <div key={name} style={{
               background: "rgba(255,255,255,0.04)",
               border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: 20,
-              padding: "24px",
+              borderRadius: 16,
+              padding: "16px 14px",
               textAlign: "center",
             }}>
               <div style={{
-                width: 60, height: 60, borderRadius: 20, background: bg,
+                width: 44, height: 44, borderRadius: 14, background: bg,
                 display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 22, fontWeight: 900, color: "#fff",
-                margin: "0 auto 16px",
-                boxShadow: `0 8px 24px ${bg}44`,
+                fontSize: 17, fontWeight: 900, color: "#fff",
+                margin: "0 auto 10px",
+                boxShadow: `0 6px 18px ${bg}44`,
               }}>{initials}</div>
-              <div style={{ fontSize: 17, fontWeight: 800, color: "#fff", marginBottom: 4 }}>{name}</div>
-              <div style={{ fontSize: 12, color: bg, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 12 }}>{role}</div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>{detail}</div>
+              <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", marginBottom: 3 }}>{name}</div>
+              <div style={{ fontSize: 11, color: bg, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>{role}</div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>{detail}</div>
             </div>
           ))}
         </div>
@@ -814,27 +814,27 @@ function Slide11Team({ active }: SlideProps) {
         <div className="anim-4" style={{
           background: "rgba(245,166,35,0.1)",
           border: "1px solid rgba(245,166,35,0.3)",
-          borderRadius: 20,
-          padding: "24px 32px",
+          borderRadius: 16,
+          padding: "16px 24px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
         }}>
           <div>
-            <div style={{ fontSize: 13, color: "#F5A623", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Raising</div>
-            <div style={{ fontSize: 44, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace" }}>$500K</div>
-            <div style={{ fontSize: 14, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>Pre-seed · 18% SAFE</div>
+            <div style={{ fontSize: 11, color: "#F5A623", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Raising</div>
+            <div style={{ fontSize: 32, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace" }}>$500K</div>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 3 }}>Pre-seed · 18% SAFE</div>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
             {[
               { pct: "40%", label: "Engineering" },
               { pct: "30%", label: "Growth + Community" },
               { pct: "20%", label: "Ops + Compliance" },
               { pct: "10%", label: "Buffer" },
             ].map(({ pct, label }) => (
-              <div key={label} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 15, fontWeight: 700, color: "#F5A623", width: 40, textAlign: "right" }}>{pct}</div>
-                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>{label}</div>
+              <div key={label} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 13, fontWeight: 700, color: "#F5A623", width: 36, textAlign: "right" }}>{pct}</div>
+                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{label}</div>
               </div>
             ))}
           </div>
@@ -854,39 +854,39 @@ function Slide12Close({ active }: SlideProps) {
       <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)", backgroundSize: "64px 64px" }} />
 
       <div style={{ position: "relative", zIndex: 1, maxWidth: 700 }}>
-        <div className="anim-1" style={{ fontSize: 72, marginBottom: 24 }}>🇵🇰</div>
-        <div className="anim-2" style={{ fontSize: "clamp(32px, 5vw, 64px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-2px", marginBottom: 20 }}>
+        <div className="anim-1" style={{ fontSize: 48, marginBottom: 14 }}>🇵🇰</div>
+        <div className="anim-2" style={{ fontSize: "clamp(26px, 4vw, 50px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-2px", marginBottom: 14 }}>
           Every rupee counts.<br />
           <span style={{ background: "linear-gradient(135deg, #1A9E5A, #4CD98B)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Help us keep more.</span>
         </div>
 
-        <div className="anim-3" style={{ fontSize: 18, color: "rgba(255,255,255,0.6)", marginBottom: 48, lineHeight: 1.6 }}>
+        <div className="anim-3" style={{ fontSize: 15, color: "rgba(255,255,255,0.6)", marginBottom: 28, lineHeight: 1.5 }}>
           9 million Pakistani families are waiting for the app<br />that makes sending money home simple, transparent, and fair.
         </div>
 
-        <div className="anim-4" style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap" }}>
+        <div className="anim-4" style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <div style={{
             background: "linear-gradient(135deg, #1A9E5A, #0E6B3A)",
-            borderRadius: 20,
-            padding: "20px 40px",
+            borderRadius: 16,
+            padding: "14px 32px",
             boxShadow: "0 8px 40px rgba(26,158,90,0.4)",
           }}>
-            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 4 }}>Email</div>
-            <div style={{ fontSize: 16, fontWeight: 800, color: "#fff", fontFamily: "'DM Mono', monospace" }}>invest@hawalatrack.app</div>
+            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.7)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 3 }}>Email</div>
+            <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", fontFamily: "'DM Mono', monospace" }}>invest@hawalatrack.app</div>
           </div>
           <div style={{
             background: "rgba(255,255,255,0.06)",
             border: "1px solid rgba(255,255,255,0.15)",
-            borderRadius: 20,
-            padding: "20px 40px",
+            borderRadius: 16,
+            padding: "14px 32px",
             backdropFilter: "blur(8px)",
           }}>
-            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 4 }}>Website</div>
-            <div style={{ fontSize: 16, fontWeight: 800, color: "#fff", fontFamily: "'DM Mono', monospace" }}>hawalatrack.app</div>
+            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 3 }}>Website</div>
+            <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", fontFamily: "'DM Mono', monospace" }}>hawalatrack.app</div>
           </div>
         </div>
 
-        <div className="anim-5" style={{ marginTop: 48, fontSize: 13, color: "rgba(255,255,255,0.3)", fontFamily: "'DM Mono', monospace" }}>
+        <div className="anim-5" style={{ marginTop: 24, fontSize: 12, color: "rgba(255,255,255,0.3)", fontFamily: "'DM Mono', monospace" }}>
           $500K pre-seed · 18% SAFE · Closing Q2 2025
         </div>
       </div>
