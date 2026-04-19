@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import "./index.css";
 
 const SLIDE_DURATION = 20; // seconds per slide
-const TOTAL_SLIDES = 12;
+const TOTAL_SLIDES = 11;
 
 interface SlideProps {
   active: boolean;
@@ -771,87 +771,6 @@ function Slide10Competition({ active }: SlideProps) {
   );
 }
 
-function Slide11Team({ active }: SlideProps) {
-  return (
-    <div className="slide" style={{
-      background: "linear-gradient(135deg, #0A1628 0%, #0D2045 100%)",
-      opacity: active ? 1 : 0, pointerEvents: active ? "all" : "none", transition: "opacity 0.6s ease",
-    }}>
-      <div style={{ maxWidth: 920, width: "100%" }}>
-        <div className="anim-1" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#F5A623", textTransform: "uppercase", marginBottom: 8 }}>Founding Team & Ask</div>
-        <div className="anim-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.1, letterSpacing: "-1.5px", marginBottom: 14 }}>
-          Built by someone who lived this problem
-        </div>
-
-        <div className="anim-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 12 }}>
-          {/* Founder card */}
-          <div style={{
-            background: "rgba(245,166,35,0.07)",
-            border: "1px solid rgba(245,166,35,0.25)",
-            borderRadius: 16,
-            padding: "20px 18px",
-          }}>
-            <div style={{ fontSize: 12, color: "#F5A623", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>Founder</div>
-            <div style={{ fontSize: 15, fontWeight: 800, color: "#fff", marginBottom: 6 }}>Saadia Asghar</div>
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>
-              Pakistani diaspora member with first-hand experience of the remittance pain. Building HawalaTrack to solve the problem she faced every month — one app to compare, track, and save.
-            </div>
-          </div>
-
-          {/* Roles we're hiring */}
-          <div style={{
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.1)",
-            borderRadius: 16,
-            padding: "20px 18px",
-          }}>
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>Team We're Building</div>
-            {[
-              { role: "CTO / Lead Engineer", skills: "React Native · Node.js · Fintech APIs" },
-              { role: "Community Lead", skills: "Pakistani diaspora networks · GTM" },
-              { role: "Advisors", skills: "Remittance industry · Compliance" },
-            ].map(({ role, skills }) => (
-              <div key={role} style={{ marginBottom: 10 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{role}</div>
-                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>{skills}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="anim-4" style={{
-          background: "rgba(245,166,35,0.1)",
-          border: "1px solid rgba(245,166,35,0.3)",
-          borderRadius: 16,
-          padding: "16px 24px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}>
-          <div>
-            <div style={{ fontSize: 11, color: "#F5A623", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Raising</div>
-            <div style={{ fontSize: 32, fontWeight: 900, color: "#fff", fontFamily: "'DM Mono', monospace" }}>$500K</div>
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 3 }}>Pre-seed · 18% SAFE</div>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-            {[
-              { pct: "40%", label: "Engineering" },
-              { pct: "30%", label: "Growth + Community" },
-              { pct: "20%", label: "Ops + Compliance" },
-              { pct: "10%", label: "Buffer" },
-            ].map(({ pct, label }) => (
-              <div key={label} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 13, fontWeight: 700, color: "#F5A623", width: 36, textAlign: "right" }}>{pct}</div>
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Slide12Close({ active }: SlideProps) {
   return (
     <div className="slide" style={{
@@ -913,7 +832,6 @@ const SLIDES = [
   { component: Slide08BusinessModel, title: "Business Model" },
   { component: Slide09Traction, title: "Traction" },
   { component: Slide10Competition, title: "Competition" },
-  { component: Slide11Team, title: "Team & Ask" },
   { component: Slide12Close, title: "Close" },
 ];
 
